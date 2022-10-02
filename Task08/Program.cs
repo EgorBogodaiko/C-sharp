@@ -15,8 +15,8 @@ else
 {
     Console.WriteLine($"Чётные числа, которые есть от 1 до {number}: ");
 
-    for (int counter = 2; counter <= number; counter = counter + 2)
+    for (int i = 2; i <= number; i += 2)
     {
-        Console.WriteLine(counter);
+        Console.WriteLine(i);
     }
 }
