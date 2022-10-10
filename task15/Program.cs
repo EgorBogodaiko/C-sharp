@@ -7,17 +7,17 @@
 // 1 -> нет
 
 Console.WriteLine("Введите цифру, обозначающую день недели:");
-int num= Convert.ToInt32(Console.ReadLine());
+int num = Convert.ToInt32(Console.ReadLine());
 
-if ((num<1)^(num>7))
+if ((num < 1) ^ (num > 7))
 {
-  Console.WriteLine("Нет такого дня недели");  
+    Console.WriteLine("Нет такого дня недели");
 }
- if ((num>0)&&(num<6))
+if ((num > 0) && (num < 6))
 {
-   Console.WriteLine("Нет");   
+    Console.WriteLine("Нет");
 }
- if ((num>5)&&(num<8))
+if ((num > 5) && (num < 8))
 {
-   Console.WriteLine("Да");   
+    Console.WriteLine("Да");
 }
