@@ -7,7 +7,7 @@
 
 // A (7,-5, 0); B (1,-1,9) -> 11.53
 string[,] tochki = new string[4, 4];
-int dist = default;
+double dist = default;
 tochki[0, 1] = "X";
 tochki[0, 2] = "Y";
 tochki[0, 3] = "Z";
@@ -26,24 +26,27 @@ for (int i = 1; i < 3; i++)
     }
 }
 
-
-for (j = 1; j < 4; j++)
+for (int j = 1; j < 4; j++)
 {
-    tochki[3, j] = raznsqr(Convert.ToDouble(tochki[2, j]), Convert.ToDouble(tochki[1, j]));
+    tochki[3, j] = Convert.ToString(raznsqr(Convert.ToDouble(tochki[2, j]), Convert.ToDouble(tochki[1, j])));
 }
 
-dist = distance(tochki[1, 1], tochki[1, 2], tochki[1, 3]);
-Console.WriteLine($"Расстояние между точками = {dist} ");
+dist = Math.Round(distance(tochki[3, 1], tochki[3, 2], tochki[3, 3]),2);
+Console.WriteLine($"Расстояние между точками = {Convert.ToString(dist)}");
 
-double distance(double x, double y, double z)
+double distance(string x, string y, string z)
 {
-    double d = Math.Sqrt(x + y + z);
+    double x1= Convert.ToDouble(x);
+    double y1= Convert.ToDouble(y);
+    double z1= Convert.ToDouble(z);
+
+    double d = Math.Sqrt(x1 + y1 + z1);
     return d;
 }
 
-double raznsqr(int a, int b)
+double raznsqr(double a, double b)
 {
-    int razn = sqr(b - a);
+    double razn = sqr(Convert.ToInt32( b )- Convert.ToInt32( a));
     return razn;
 }
 
@@ -52,13 +55,3 @@ int sqr(int num)
     int sqr = num * num;
     return sqr;
 }
-
-// for (int i = 0; i < 3; i++)
-// {
-//     for (int j = 0; j < 4; j++)
-//     {
-//         Console.WriteLine($"{tochki[i, j]}");
-
-//     }
-//     Console.Write(" ");
-// }
