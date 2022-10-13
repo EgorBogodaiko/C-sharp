@@ -2,19 +2,20 @@
 
 // 1, 2, 5, 7, 19, 6, 1, 33 -> [1, 2, 5, 7, 19, 6, 1, 33]
 
-Console.WriteLine("Придумаю массив из 8 чисел:");
+Console.WriteLine("Придумаю массив из 8 чисел в диапазоне от 1 до 40:");
 
 int[] numbers = new int[8];
 
-Random rnd = new Random();
-int FillArray(int[] array)
+
+void FillArray(int[] array)
 {
+    Random rnd = new Random();
     int size = array.Length;
     for (int i = 0; i < size; i++)
     {
-        array[i] = new rnd.Next(1, 41);
+        array[i] = rnd.Next(1, 41);
     }
-    return array;
+    
 }
 
 void PrintArray(int[] array)
@@ -27,3 +28,6 @@ void PrintArray(int[] array)
     }
     Console.Write($"]");
 }
+
+FillArray(numbers);
+PrintArray(numbers);
