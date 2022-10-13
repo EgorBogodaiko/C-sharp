@@ -3,20 +3,28 @@
 // 3, 5 -> 243 (3⁵)
 
 // 2, 4 -> 16
-Console.WriteLine("Введите целое число, которое будет основанием степени:");
+
+Console.Write("Введите целое число, которое будет основанием степени: ");
 int a = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите целое число, которое будет показателем степени:");
+
+Console.Write("Введите целое число, которое будет показателем степени: ");
 int b = Convert.ToInt32(Console.ReadLine());
-double expo=default;
-Console.WriteLine($"Число {a}  в степени {b} = ");
 
-if ((b == 0)&&(a!=0)) Console.WriteLine("1");
-if (a == 1) Console.WriteLine("1");
+Console.Write($"Число {a} в степени {b} = ");
+double result = ExpoNException(a, b);
+Console.Write($"{result}");
 
-if ((b!=0)&&(a!=1))
+double ExpoNException(int numA, int numB)
 {
-    expo = Expo(a,b);
-    Console.WriteLine($"{expo}");
+    double expo = default;
+    if ((b == 0) && (a != 0)) expo = 1;
+    if (a == 1) expo = 1;
+    if ((b != 0) && (a != 1))
+    {
+        expo = Expo(a, b);
+
+    }
+    return expo;
 }
 
 double Expo(int numA, int numB)
@@ -26,6 +34,6 @@ double Expo(int numA, int numB)
     {
         result = numA * result;
     }
-    if (numB<0) result=1/result;
+    if (numB < 0) result = 1 / result;
     return result;
 }
