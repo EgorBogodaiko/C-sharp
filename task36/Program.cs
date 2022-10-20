@@ -17,7 +17,7 @@ int[] FillArrayRnd(int[] arr, int min, int max)
 void PrintArray(int[] arr, int index)
 {
     System.Console.Write("[");
-    for (int i = 0; i < arr.Length; i += index)
+    for (int i = -1+ index; i < arr.Length; i += index)
     {
         if
         (i < arr.Length - index)
