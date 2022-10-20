@@ -1,12 +1,9 @@
 ﻿// Задача 29: Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
-
 // 1, 2, 5, 7, 19, 6, 1, 33 -> [1, 2, 5, 7, 19, 6, 1, 33]
 
 Console.WriteLine("Придумаю массив из 8 чисел в диапазоне от 1 до 40:");
 
 int[] numbers = new int[8];
-
-
 void FillArray(int[] array)
 {
     Random rnd = new Random();
@@ -17,7 +14,6 @@ void FillArray(int[] array)
     }
     
 }
-
 void PrintArray(int[] array)
 {
     int size = array.Length;

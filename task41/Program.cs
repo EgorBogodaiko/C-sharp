@@ -1,12 +1,6 @@
 ﻿// Задача 41: Пользователь вводит с клавиатуры M чисел. Посчитайте, сколько чисел больше 0 ввёл пользователь.
-
 // 0, 7, 8, -2, -2 -> 2
-
 // -1, -7, 567, 89, 223-> 3
-
-
-
-
 
 void FillArrayManually(int[] arr, int size)
 {
@@ -40,7 +34,6 @@ void PrintArray(int[] array)
     }
     Console.WriteLine($"]");
 }
-
 
 System.Console.WriteLine("Сколько чисел хочешь ввести?");
 int qty = Convert.ToInt32(System.Console.ReadLine());
