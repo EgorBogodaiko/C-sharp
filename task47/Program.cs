@@ -27,7 +27,7 @@ void FillRndMatrix2D(double[,] arr, int mins, int maxs)
     {
         for (int j = 0; j < arr.GetLength(1); j++)
         {
-            arr[i, j] = Math.Round((rnd.NextDouble() * (max - min) + min), 1);
+            arr[i, j] = Math.Round((rnd.NextDouble() * (maxs - mins) + mins), 1);
         }
     }
 }
