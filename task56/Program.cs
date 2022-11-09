@@ -100,7 +100,7 @@ string ConclusionMinSumRow(int[,] arr)
     }
     else
     {
-        conclusion = "$Номер строки с минимальной суммой элементов = " + System.Convert.ToString(arr[0, 0] + 1);
+        conclusion = "Номер строки с минимальной суммой элементов = " + System.Convert.ToString(arr[0, 0] + 1);
     }
     return conclusion;
 }
