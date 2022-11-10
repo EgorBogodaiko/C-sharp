@@ -17,20 +17,23 @@ int[,,] matrix = new int[row, col, depth];
 int[,] matrix2d = new int[row * col * depth, 5];
 int minRndVal = 10;
 int maxRndVal = 20;
+
 CheckForCapacity(row, col, depth, minRndVal, maxRndVal);
 FillRndMatrix3D(matrix, minRndVal, maxRndVal);
 matrix2d = Arr3dTo2d(matrix);
 PrintMatrixByRows(matrix2d);
 SortArr3dParam(matrix2d, 0);
+
 while (CheckDublicates(matrix2d) == true)
 {
     SortArr3dParam(matrix2d, 0);
     ChangeDublicates(matrix2d, minRndVal, maxRndVal);
 }
+
 SortArr3dParam(matrix2d, 4);
 System.Console.WriteLine("Трёхмерная матрица построчно:");
 PrintMatrixByRows(matrix2d);
-
+//__________________________________________________________
 void FillRndMatrix3D(int[,,] arr, int mins, int maxs)
 {
     Random rnd = new Random();
