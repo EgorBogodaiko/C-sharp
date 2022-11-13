@@ -66,4 +66,3 @@ void PrintArrayTwo(int[,] arr)
         Console.WriteLine("|");
     }
 }
-
