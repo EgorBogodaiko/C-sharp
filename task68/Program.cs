@@ -6,7 +6,11 @@ Console.Write("Введите первое целое положителное �
 int number1 = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите второе целое положителное число: ");
 int number2 = Convert.ToInt32(Console.ReadLine());
+if((number1<0)||(number2<0)) Console.WriteLine("Какое-то из чисел не положительное.");
+else if ((number1>4)&&(number2>0)) Console.WriteLine("Получится слишком большое число для вывода здесь. Будет переполнение типа.");
+else
 Console.WriteLine($"Функция Аккермана А({number1},{number2}) = {Akkerman(number1, number2)}");
+
 int Akkerman(int m, int n)
 {
     if (m == 0) return (n + 1);
